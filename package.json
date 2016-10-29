@@ -1,0 +1,28 @@
+{
+  "name": "moto_destinations",
+  "version": "1.0.0",
+  "description": "Moto Destinations Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Julie S. Mike",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angularjs-geolocation": "^0.1.3",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "holder": "0.0.0",
+    "holderjs": "^2.9.4",
+    "jquery": "^3.1.1",
+    "jsonwebtoken": "^7.1.9",
+    "method-override": "^2.3.6",
+    "modernizr": "^3.3.1",
+    "mongoose": "^4.6.5",
+    "morgan": "^1.7.0"
+  }
+}
