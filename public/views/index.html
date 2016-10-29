@@ -3,13 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Moto Destinations</title>
+    <meta name="description" content="An example demonstrating Google Map integration with MEAN Apps">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
     <link rel="stylesheet" href="vendors/bootstrap.min.css"/>
     <link rel="stylesheet" href="styles/styles.css"/>
-    <!-- Holder JS -->
-    <script src="vendors/holder.js"></script>
-    <!-- Google Maps API -->
+        <!-- Google Maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeAoeqIjOOs2OXit9y4OYsXrr5JqJ5cro"></script>
     <!-- Modernizr -->
     <script src="vendors/modernizr"></script>
@@ -18,8 +17,12 @@
     <script src="vendors/angular.min.js"></script>
     <script src="vendors/angular-route.min.js"></script>
     <script src="vendors/angularjs-geolocation.min.js"></script>
+    <script src="scripts/app.js"></script>
+   <script src="scripts/addCtrl.js"></script>
+   <script src="scripts/gservice.js"></script>
+
   </head>
-  <body>
+  <body ng-controller="addCtrl">
   <div class="container">
       <div class="header">
           <ul class="nav nav-pills pull-right">
@@ -32,7 +35,7 @@
       <div class="row content">
           <!-- Google Map -->
           <div class="col-md-7">
-              <div id="map"><img src="holder.js/645x645"></div>
+               <div id="map" style="width:645px; height:645px"></div>
           </div>
           <!-- Side Panel -->
           <div class="col-md-5">
@@ -90,7 +93,7 @@
                               <input type="text" class="form-control" id="verified" placeholder= "Nope (Thanks for spamming my map...)" ng-model="formData.htmlverified" readonly>
                           </div>
                           <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
-                          <button type="submit" class="btn btn-danger btn-block" ng-disabled="addForm.$invalid">Submit</button>
+                          <button type="submit" class="btn btn-danger btn-block" ng-click="createUser()" ng-disabled="addForm.$invalid">Submit</button>
                       </form>
                   </div>
               </div>

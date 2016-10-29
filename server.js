@@ -12,7 +12,7 @@ var app = express();
 mongoose.connect("mongodb://localhost/MeanMapApp");
 //connection.connect();
 
-app.use(express.static(__dirname + 'public'));
+app.use(express.static('public'));
 app.use('/node_modules',  express.static(__dirname + '/node_modules'));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
