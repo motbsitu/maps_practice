@@ -51,12 +51,12 @@ queryCtrl.controller('queryCtrl', function($scope, $log, $http, $rootScope, geol
 
             // Store the filtered results in queryResults
             .success(function(queryResults){
-
+              gservice.refresh(queryBody.latitude, queryBody.longitude, queryResults);
                 // Query Body and Result Logging
-                console.log("QueryBody:");
-                console.log(queryBody);
-                console.log("QueryResults:");
-                console.log(queryResults);
+                // console.log("QueryBody:");
+                // console.log(queryBody);
+                // console.log("QueryResults:");
+                // console.log(queryResults);
 
                 // Count the number of records retrieved for the panel-footer
                 $scope.queryCount = queryResults.length;
