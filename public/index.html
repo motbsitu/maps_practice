@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="meanMapApp">
+<head>
+    <meta charset="utf-8">
+    <title>Moto Destinations</title>
+    <meta name="description" content="An example demonstrating Google Map integration with MEAN Apps">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="vendors/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles/styles.css"/>
+        <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeAoeqIjOOs2OXit9y4OYsXrr5JqJ5cro"></script>
+    <!-- Modernizr -->
+    <!-- <script src="vendors/modernizr"></script> -->
+    <!-- JS Source -->
+    <script src="vendors/jquery.min.js"></script>
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-route.min.js"></script>
+    <script src="vendors/angularjs-geolocation.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/addCtrl.js"></script>
+    <script src="scripts/gservice.js"></script>
+    <script src="scripts/queryCtrl.js"></script>
+    <!-- <base href="/" /> -->
+
+  </head>
+  <body>
+  <div class="container">
+      <div class="header">
+          <ul class="nav nav-pills pull-right">
+              <li active><a href="/#/join">Join the Team</a></li>
+              <li disabled><a href="/#/find">Find Teammates</a></li>
+          </ul>
+          <h3 class="text-muted">The Scotch MEAN MapApp</h3>
+      </div>
+      <!-- Map and Side Panel -->
+    <div class="row content">
+        <!-- Google Map -->
+        <div class="col-md-7">
+            <div id="map"></div>
+        </div>
+        <!-- Side Panel - Now Handled by ng-view -->
+        <div ng-view></div>
+
+    </div>
+    <hr/>
+    <!-- Footer -->
+    <div class="footer">
+        <p class="text-center"> Julie</p>
+    </div>
+</div>
+</body>
+</html>

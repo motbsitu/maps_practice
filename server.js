@@ -9,6 +9,7 @@ const methodOverride = require('method-override');
 
 var app = express();
 
+mongoose.promise = global.Promise;
 mongoose.connect("mongodb://localhost/MeanMapApp");
 //connection.connect();
 
@@ -25,9 +26,6 @@ app.use(methodOverride());
 
 require('./routes/routes.js')(app);
 //app.use('/routes', routes);
-app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, 'public/views/index.html'));
-});
 
 
 var server = app.listen(3000, function() {
